@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="modern-normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Effort Academy</title>
+  </head>
+
+  <body>
+    <div class="logo-container">
+      <div class="logo-background">
+        <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png" alt="">
+        <div class="odin-logo">ODIN</div>
+      </div>
+
+      <p class="by-container">
+        Photo by
+        <a
+          href="https://unsplash.com/@introspectivedsgn"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Erik Mclean</a
+        >
+        on
+        <a
+          href="https://unsplash.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Unsplash</a
+        >
+      </p>
+    </div>
+
+    <div class="content-container">
+      <div class="content-item">
+        <p>
+          <strong>Effort Academy - The Forge of Vitality</strong> <br /><br />
+          We forge strength through guided effort, offering no shortcuts, only growth. Learn with curiosity, thrive with vitality, and join us to shape a brighter future.
+        </p>
+      </div>
+
+      <form action="#" method="POST" id="form" class="content-item">
+
+        <legend>Let's do this!</legend>
+        <p aria-hidden="true">Fields marked with * are required</p>
+
+        <div class="form-row">
+          <input type="text" id="first-name" name="first-name" placeholder="First Name">
+        </div>
+
+        <div class="form-row">
+          <input type="text" id="last-name" name="last-name" placeholder="Last Name">
+        </div>
+
+        <div class="form-row">
+          <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
+
+        <div class="form-row">
+          <input type="tel" id="phone" name="phone" placeholder="Phone Number 8...">
+        </div>
+
+        <div class="form-row">
+          <input type="password" id="password" name="password" placeholder="Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$" 
+          title="The password must contain at least 8 characters, including a lowercase letter, an uppercase letter, a number and a special character.">
+        </div>
+
+        <div class="form-row">
+          <input type="password" id="password-check" name="password-check" placeholder="Repeat Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$" 
+          title="The password must contain at least 8 characters, including a lowercase letter, an uppercase letter, a number and a special character.">
+        </div>       
+
+      </form>
+
+      <div class="content-item button-container">
+        <button type="submit" form="form">Sign in</button>
+        <p>Already have an account? <a href="#">Log in</a></p>
+      </div>      
+    </div>
+  </body>
+</html>

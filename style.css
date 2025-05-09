@@ -1,0 +1,203 @@
+@font-face {
+    font-family: "ODIN";
+    src: url(./assets/fonts/Norse-Bold.otf);
+}
+
+body {
+    font-family: "ODIN";
+    display: flex;
+    min-height: 100dvh;
+    min-width: 100dvw;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  :root {
+    --light: hsl(0, 0%, 90%);
+    --middle: hsl(0, 0%, 80%);
+    --dark: hsl(210, 79%, 24%);
+    --orange: hsl(30, 100%, 54%);
+    --red: hsl(0, 76%, 59%);
+  }
+  
+  /* body container */
+  .logo-container {
+    flex: 1 2;
+    background: url(./assets/img/erik-mclean-OQgpRHFJwbQ-unsplash.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .content-container {
+    flex: 2 1;
+    color: var(--light);
+    display: flex;
+    flex-direction: column;
+    background: url(./assets/img/erik-mclean-OQgpRHFJwbQ-unsplash.jpg) no-repeat center;
+    align-items: flex-start;
+  }
+  
+  /* logo container */
+  .odin-logo {
+    font-size: calc(100vw * (2 / 20));
+    font-family: "ODIN";
+    color: var(--light);
+    padding-top: 20px;
+  }
+  .logo-background {
+    position: relative;
+    width: 70%;
+    top: calc(100vh * (2 / 7));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+  }
+  .logo-background > img {
+    width: calc(0.07 * 100vw);
+    height: calc(0.1 * 100vh);
+  }
+  .logo-container > p {
+    color: var(--light);
+    text-align: center;
+    margin-top: auto;
+    font-size: 1rem;
+  }
+  .logo-container > p > a {
+    color: inherit;
+  }
+
+  .by-container {
+    backdrop-filter: blur(10px);
+  }
+  .logo-background_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* content container */
+  .content-item {
+    padding-inline: min(5%, 64px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: calc(1rem + 0.1vw);
+  }
+  .content-container > div {
+    min-height: calc(100vh * (1 / 5));
+  }
+  .content-container > form {
+    min-height: calc(100vh * (3 / 5));
+  }
+  
+  div.content-item > p {
+    width: min(100%, 50ch);
+    white-space: wrap;
+  }
+  button {
+    background: var(--orange);
+    color: inherit;
+    padding-inline: 16px;
+    padding-block: 8px;
+    width: min(200px, 50%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: auto;
+    margin-top: 32px;
+    transform: scale(100%);
+    box-shadow: 1px 1px 3px var(--dark);
+  }
+  button:active {
+    box-shadow: inset 1px 1px 3px var(--dark);
+  }
+  .button-container {
+    display: block;
+  }
+  .button-container > p {
+    font-size: 0.9rem;
+    a {
+      color: var(--orange);
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+  
+  
+  /* form */
+  #form {
+    background: url(./assets/img/erik-mclean-OQgpRHFJwbQ-unsplash.jpg) start;
+    box-shadow: 1px 1px 3px var(--dark);
+    padding-block: 32px;
+    display: block;
+  }
+  .form-row{
+    display: flex;
+    flex-direction: column;
+    width: max(34%, 230px);
+    padding: 16px 16px 16px 0px;
+    float: left;
+  }
+  #form > legend{
+    margin-bottom: 32px;
+  }
+  .form-row > label{
+    font-size: calc(.8rem + 0.1vw);
+    cursor: pointer;
+    background-color: var(--orange);
+    width: fit-content;
+    padding: 4px;
+    position: relative;
+    top: 4px;
+    left: 5%;
+    border-radius: 8px;
+    transition: all .3s linear;
+  }
+  .form-row > input{
+    border: 1px solid var(--dark);
+    border-radius: 4px;
+    height: 32px;
+  }
+  .form-row > input:invalid{
+    border: 1px solid var(--red);
+  }
+  .form-row > input:focus {
+    box-shadow: 2px 2px 3px var(--orange);
+    outline: none;
+  }
+  .form-row:has(input:focus) label {
+    top: -4px;
+  }
+  #form > p {
+    font-size: calc(.8rem + 0.1vw);
+  }
+  
+  
+  @media only screen and (max-width: 767px) {
+      body{
+          flex-direction: column;
+          overflow-x: hidden;
+      }
+      .logo-container {
+          flex-direction: column-reverse;
+          width: 100vw;
+      }
+      .content-container{
+          width: 100vw;
+      }
+      .logo-background{
+          position: static;
+          backdrop-filter: none;
+          background-color: transparent;
+      }
+      .logo-background > img {
+          backdrop-filter: none;
+          margin-bottom: 16px;
+      }
+      .form-row{
+        width: 70%;
+      }
+  }
